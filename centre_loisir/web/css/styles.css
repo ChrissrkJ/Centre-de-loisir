@@ -1,0 +1,21 @@
+*{
+font-family: 'Montserrat Alternates', sans-serif;
+/*font-size: 0.92rem;*/
+}
+
+ h1{
+  text-align: center;
+  font-family: 'Paytone One', sans-serif;
+  color:#ecf0ff;
+  background-color: #2b272b;
+  padding: 10px;
+}
+
+h4{
+ text-align: center;
+ font-family: 'Paytone One', sans-serif;
+ color: #87af4a;
+}
+
+
+/*MENU*/

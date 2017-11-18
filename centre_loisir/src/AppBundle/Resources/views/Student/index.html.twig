@@ -1,0 +1,41 @@
+{% extends "::base.html.twig" %}
+
+
+
+{% block body %}
+<div class="row">
+  <div class="col-md-6">
+    <h4>Liste des étudiants : </h4>
+
+    <table class="table table-striped table-dark">
+      <thead>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        {% for s in students %}
+        <tr>
+          <td>{{ s.lastname }}</td>
+          <td>{{ s.firstname }}</td>
+          <td>
+            <a href=" {{ path('student_delete',{'id':s.id})}}" class="btn btn-danger btn-xs">Supprimer</a>
+            <a href="{{ path('student_update',{'id':s.id})}}" class="btn btn-warning btn-xs">Modifier</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-md-6">
+    <h4>Ajouter un étudiant : </h4>
+    <a href="{{path('student_add')}}" class="btn btn-primary" >Cliquez ici >>></a>
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

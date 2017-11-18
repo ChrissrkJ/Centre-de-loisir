@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Centre de loisir</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Chivo|Montserrat+Alternates|Paytone+One" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+
+        {% block styles %}
+        {% endblock %}
+    </head>
+    <body id="#homepage">
+      <div class="container">
+        <h1>Bienvenue au centre de loisir !</h1>
+
+        <nav>
+          <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item"><a href="{{ path('homepage') }}" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="{{ path('student_index') }}" class="nav-link">Students</a></li>
+            <li class="nav-item"><a href="{{ path('lesson_index') }}" class="nav-link">Lessons</a></li>
+            <li class="nav-item"><a href="{{ path('teacher_index') }}" class="nav-link">Teachers</a></li>
+          </ul>
+        </nav>
+
+      </div>
+      <div class="container">
+        {% block body %}{% endblock %}
+
+
+      </div>
+    </body>
+</html>
